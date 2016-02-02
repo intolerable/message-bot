@@ -1,0 +1,42 @@
+name:                message-bot
+version:             0.1.0.0
+-- synopsis:
+-- description:
+license:             BSD3
+license-file:        LICENSE
+author:              Fraser Murray
+maintainer:          fraser.m.murray@gmail.com
+-- copyright:
+-- category:
+build-type:          Simple
+-- extra-source-files:
+cabal-version:       >=1.10
+
+library
+  exposed-modules:
+    MessageBot
+  -- other-modules:
+  -- other-extensions:
+  build-depends:
+    base >=4.8 && <4.9,
+    async,
+    attoparsec,
+    reddit,
+    stm,
+    text,
+    transformers
+  hs-source-dirs:      src
+  ghc-options: -Wall
+  default-language:    Haskell2010
+  default-extensions:
+    OverloadedStrings
+    ViewPatterns
+    LambdaCase
+
+executable message-bot
+  hs-source-dirs: ./
+  main-is: Main.hs
+  default-language: Haskell2010
+  build-depends:
+    base == 4.*,
+    message-bot
